@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <h1 class="logo"><a href="#header">Khant</a></h1>
+        <div class="toggle" onclick="toggleNav()">
+          <div>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="navlinks">
+          <ul>
+            <a href="#header" onclick="toggleNav()"><li>Home</li></a>
+            <a href="#about" onclick="toggleNav()"><li>About</li></a>
+            <a href="#mywork" onclick="toggleNav()"><li>Mywork</li></a>
+            <a href="#Contact" onclick="toggleNav()"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
+      <div class="bannerContent row">
+        <div class="col-md-6 order-md-1 order-2 bannerText">
+          <h2>Hello Welcome</h2>
+          <h1>I'm <span>Khant</span></h1>
+          <p>I build interactive and responsive websites for all platforms.</p>
+        </div>
+        <div class="col-md-6 order-md-2 order-1 bannerImg">
+          <img src="./assets/My project.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- about  -->
+      <section id="about">
+        <div class="aboutContainer row">
+          <div class="col-md-6 aboutImgContainer">
+            <img src="./assets/Avatar.png" alt="" />
+          </div>
+          <div class="col-md-6 aboutTextContainer">
+            <div class="Cont">
+              <h1>About Me</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                velit? Ab eligendi labore eum accusamus blanditiis asperiores
+                quo repellendus cupiditate, rerum ea, tempore ad. Recusandae,
+                suscipit! Iure placeat nemo suscipit.
+              </p>
+              <div class="sk">
+                <ul>
+                  <h4>Skills</h4>
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+              <div class="ed">
+                <ul>
+                  <h4>Education</h4>
+                  <li>HND in Computing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- mywork  -->
+      <section id="mywork">
+        <div><h1>My Work</h1></div>
+        <div class="row myworkContainer">
+          <div class="col-md-4">
+            <div class="pj1 pj">
+              <img src="./assets/Calculator.png" alt="" class="pjImg" />
+              <h3 class="PjName">Calculator</h3>
+              <ul class="pjText">
+                <li>HTML</li>
+                <li>Css</li>
+                <!-- <li>Bootstrap</li> -->
+                <li>JavaScript</li>
+              </ul>
+              <a href="https://khant21699.github.io/calculator/"
+                ><button class="Btn">Demo</button></a
+              >
+              <a href="https://github.com/khant21699/calculator"
+                ><button class="Btn">Socuce Code</button></a
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pj1 pj">
+              <img src="./assets/ptt.png" alt="" class="pjImg" />
+              <h3 class="PjName">Ptt Software Company</h3>
+              <ul class="pjText">
+                <li>HTML</li>
+                <li>Css</li>
+                <li>Bootstrap</li>
+                <!-- <li>JavaScript</li> -->
+              </ul>
+              <a href="https://khant21699.github.io/Ptt/"
+                ><button class="Btn">Demo</button></a
+              >
+              <a href="https://github.com/khant21699/Ptt"
+                ><button class="Btn">Socuce Code</button></a
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pj1 pj">
+              <img src="./assets/the coffee.png" alt="" class="pjImg" />
+              <h3 class="PjName">The Cafe</h3>
+              <ul class="pjText">
+                <li>HTML</li>
+                <li>Css</li>
+                <li>Bootstrap</li>
+                <!-- <li>JavaScript</li> -->
+              </ul>
+              <a href="https://khant21699.github.io/TheCoffeeShop/"
+                ><button class="Btn">Demo</button></a
+              >
+              <a href="https://github.com/khant21699/TheCoffeeShop"
+                ><button class="Btn">Socuce Code</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Contact">
+        <div class="row text-center contact-container">
+          <h1>Contact Me</h1>
+          <div class="col contact">
+            <form
+              action="https://formsubmit.co/c565801f4440d9044082e9e9ab955db4"
+              method="POST"
+            >
+              <input type="text" name="Name" required placeholder="Your Name" />
+              <input
+                type="email"
+                name="Email"
+                required
+                placeholder="Your Email"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="" />
+              <textarea
+                name="Message"
+                id="Message"
+                cols="30"
+                rows="10"
+                placeholder="Meaasge"
+              ></textarea>
+              <button class="submit-BTN" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="contact Btns">
+          <div>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto: khant21699@hotmail.com">Email</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/khant-khant-7b6024253/"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h4>Made with <i class="fa fa-heart" aria-hidden="true"></i> By Khant</h4>
+    </footer>
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
