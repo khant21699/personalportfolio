@@ -109,7 +109,7 @@ main {
 }
 
 .overlay.active {
-  transform: scale(100, 100);
+  transform: scale(200, 200);
 }
 
 .navlinks {
@@ -149,7 +149,7 @@ main {
   height: 8px;
   background: #33f1f1;
   border-radius: 8px;
-  transition: width 0.3s;
+  transition: width 0.2s;
 }
 
 .navlinks a li:hover::before {
@@ -230,9 +230,21 @@ main {
   padding: 0;
   object-fit: cover;
 }
+
+.aboutImgContainer > div {
+  width: 50%;
+}
 .aboutImgContainer img {
-  width: 70%;
+  width: 100%;
   object-fit: cover;
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.aboutImgContainer > div.show img {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 2s;
 }
 
 .aboutTextContainer {
@@ -256,6 +268,8 @@ main {
 .aboutTextContainer > .Cont h1 {
   color: #33f1f1;
   grid-area: h1;
+  transform: translateY(200px);
+  opacity: 0;
 }
 
 .aboutTextContainer > .Cont p {
@@ -264,9 +278,12 @@ main {
   margin-top: 50px;
   grid-area: p;
   margin-bottom: 50px;
+  transform: translateY(200px);
 }
 
 .sk {
+  transform: translateY(200px);
+
   grid-area: sk;
   display: flex;
   align-items: center;
@@ -309,6 +326,8 @@ main {
 }
 
 .ed {
+  transform: translateY(200px);
+
   grid-area: ed;
   display: flex;
   align-items: center;
@@ -322,6 +341,15 @@ main {
   );
   box-shadow: 0px 75px 100px 5px rgba(41, 241, 241, 1);
   animation: spin 5s linear infinite, spin2 5s linear infinite;
+}
+
+.aboutTextContainer > .Cont.show h1,
+.aboutTextContainer > .Cont.show p,
+.aboutTextContainer > .Cont.show .sk,
+.aboutTextContainer > .Cont.show .ed {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 2s;
 }
 
 .sk:hover ul,
@@ -374,6 +402,7 @@ main {
 /* mywork css  */
 
 .myworkContainer {
+  overflow: hidden;
   margin: 0;
   width: 100vw;
   min-height: 100vh;
@@ -390,8 +419,15 @@ main {
   object-fit: cover;
   transition: all 0.5s;
   cursor: pointer;
+  scale: 0;
   /* width: 25vw; */
 }
+
+.show > .pj {
+  scale: 1;
+  transition: all 2s;
+}
+
 .pj:hover {
   box-shadow: 0px 0px 24px 0px rgba(41, 241, 241, 0.75);
   transform: scaleY(1.01) scaleX(1.01);
@@ -455,8 +491,16 @@ main {
 }
 
 .contact-container {
+  transform: translateX(100px);
+  opacity: 0;
   margin: 0;
   width: 100vw;
+}
+
+.contact-container.show {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 2s;
 }
 
 .contact-container > h1 {
@@ -555,7 +599,19 @@ footer > h4 > i {
 }
 
 @media screen and (max-width: 600px) {
-  .Btns > div {
-    scale: 0.7;
+  #Contact {
+    position: relative;
+  }
+  .Btns {
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+    position: relative;
+  }
+  .Btns div {
+    margin: 0;
+  }
+  .submit-BTN {
+    width: 20vw;
   }
 }
